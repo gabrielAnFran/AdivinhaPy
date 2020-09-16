@@ -6,7 +6,19 @@ print("**************************")
 
 num_secreto = round(random.randrange(1, 101))
 print(num_secreto)
-total_de_tentativas = 3
+total_de_tentativas = 0
+
+print('Escolha a dificuldade')
+print('1 - Fácil | 2 - Médio | 3 - Difícil')
+dificuldade = int(input('Dificuldade: '))
+if(dificuldade == 1):
+    total_de_tentativas = 20
+elif(dificuldade == 2):
+    total_de_tentativas = 10
+elif(dificuldade == 3):
+    total_de_tentativas = 3
+else:
+    print('Dificuldade inválida')
 
 
 for rodada in range (1,total_de_tentativas+1):
@@ -24,7 +36,7 @@ for rodada in range (1,total_de_tentativas+1):
                 print("Seu chute foi maior que o a resposta correta")
             elif(menor):
                 print("Seu chute foi menor que o a resposta correta")
-    else:
-        print('Numero inválido')
-        continue
+            else:
+                print('Numero inválido')
+                continue
 print('Fim')
